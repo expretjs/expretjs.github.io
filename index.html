@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="ninodezign.com, ninodezign@gmail.com">
+	<meta name="copyright" content="ninodezign.com">
+	<title>Expret | Tutorial Latihan Js</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="images/ico/favicon.jpg">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/materialdesignicons.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
+	<link rel="stylesheet" type="text/css" href="css/unslider.css" />
+	<link rel="stylesheet" type="text/css" href="css/template.css" />
+
+</head>
+
+<body data-target="#nino-navbar" data-spy="scroll">
+
+	<!-- Header
+    ================================================== -->
+	<header id="nino-header">
+		<div id="nino-headerInner">
+			<nav id="nino-navbar" class="navbar navbar-default" role="navigation">
+				<div class="container">
+
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nino-navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">ExpretJs</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="nino-menuItem pull-right">
+						<div class="collapse navbar-collapse pull-left" id="nino-navbar-collapse">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#nino-header">Home <span class="sr-only">(current)</span></a></li>
+								<li><a href="#minggu2">Easy</a></li>
+								<li><a href="#nino-services">Medium</a></li>
+								<li><a href="#nino-ourTeam">Hard</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+
+			<section id="nino-slider" class="carousel slide container" data-ride="carousel">
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<h3 class="nino-sectionHeading">
+							<span class="nino-subHeading">Javascript Challenge</span> Welcome Home<br>
+							<h4 class="nino-sectionHeading">Expret</h4>
+						</h3>
+					</div>
+				</div>
+
+				<!-- Indicators -->
+				<ol class="carousel-indicators clearfix">
+					<li data-target="#nino-slider" data-slide-to="0" class="active">
+						<div class="inner">
+							By <span class="number">Expret </span>Javascript
+						</div>
+					</li>
+
+				</ol>
+			</section>
+		</div>
+	</header>
+	<!--/#header-->
+	<!-- Story About Us
+    ================================================== -->
+	<section id="minggu2">
+		<div class="container">
+			<h2 class="nino-sectionHeading">
+				<span class="nino-subHeading">Latihan DASAR Minggu 2</span>
+				<input type="text" id="waktu" class="form-control" placeholder="Waktu / Menit" required>
+				<button class="btn btn-success" onclick="week2()" type="submit">Mulai</button>
+
+			</h2>
+			<script>
+				var waktuMenit;
+				function week2() {
+					waktuMenit = (document.getElementById("waktu").value) * 60000;
+					document.getElementById("isi").innerHTML =
+						`<h4 class="quote"> Soal 1: variabel yang boleh 
+					kamu buat antara lain:</h4><br/>
+					<span class="name">
+						<ul>
+							<li>number1 : 33</li>
+							<br/>
+							<li>number2 : 6</li>
+							<br/>
+							<li>string1 : "foo"</li>
+							<br/>
+							<li>string2 : "bar"</li>
+							<br/>
+							<li>boolean1 : true</li>
+							<br/>
+							<li>boolean2 : false</li>
+						</u></span>`;
+					setTimeout(soal2, waktuMenit);
+				}
+
+				function soal2() {
+					document.getElementById("isi").innerHTML =
+						`
+					<h4>Soal 2: Menggunakan If Else</h4>
+					//[NAMA] dapat berupa string apa saja<br/>
+					//Contoh input 1<br/>
+					nama = ' '<br/>
+					peran = ' '<br/>
+					//Contoh input 2<br/>
+					nama = [NAMA]<br/>
+					peran = 'Ksatria'<br/>
+					//Contoh input 3<br/>
+					nama = [NAMA]<br/>
+					peran = 'Tabib'<br/>
+					//Contoh input 4<br/>
+					nama = [NAMA]<br/>
+					peran = 'Penyihir'<br/>
+					Output<br/>
+					
+					//Output untuk Input 1<br/>
+					"Nama tidak boleh kosong"<br/>
+					"Pilih peranmu untuk memulai game"<br/>
+					//Output untuk Input 2<br/>
+					"Selamat datang di Dunia Proxytia, [NAMA]"<br/>
+					"Halo Ksatria [NAMA], kamu dapat menyerang dengan senjatamu!"<br/>
+					//Output untuk Input 3<br/>
+					"Selamat datang di Dunia Proxytia, [NAMA]"<br/>
+					"Halo Tabib [NAMA], kamu akan membantu temanmu yang terluka."<br/>
+					//Output untuk Input 4<br/>
+					"Selamat datang di Dunia Proxytia, [NAMA]"<br/>
+					"Halo Penyihir [NAMA], ciptakan keajaiban yang membantu kemenanganmu!"<br/>
+						`;
+					setTimeout(soal3, waktuMenit);
+				}
+
+				function soal3() {
+					document.getElementById("isi").innerHTML =
+						`
+					<h4>Soal 3: Melakukan Looping Menggunakan For</h4>
+					1 - I love coding<br/>
+					2 - I love coding<br/>
+					3 - I love coding<br/>
+					4 - I love coding<br/>
+					5 - I love coding <br/>
+					6 - I love coding<br/>
+					7 - I love coding<br/>
+					8 - I love coding<br/>
+					9 - I love coding<br/>
+					10 - I love coding<br/>
+					11 - I love coding<br/>
+					12 - I love coding <br/>
+					13 - I love coding<br/>
+					14 - I love coding<br/>
+					15 - I love coding<br/>
+					16 - I love coding<br/>
+					17 - I love coding<br/>
+					18 - I love coding<br/>
+					19 - I love coding<br/>
+					20 - I love coding<br/>
+					20 - I will become fullstack developer<br/>
+					19 - I will become fullstack developer<br/>
+					18 - I will become fullstack developer<br/>
+					17 - I will become fullstack developer<br/>
+					16 - I will become fullstack developer<br/>
+					15 - I will become fullstack developer<br/>
+					14 - I will become fullstack developer<br/>
+					13 - I will become fullstack developer<br/>
+					12 - I will become fullstack developer<br/>
+					11 - I will become fullstack developer<br/>
+					10 - I will become fullstack developer<br/>
+					9 - I will become fullstack developer<br/>
+					8 - I will become fullstack developer<br/>
+					7 - I will become fullstack developer<br/>
+					6 - I will become fullstack developer<br/>
+					5 - I will become fullstack developer<br/>
+					4 - I will become fullstack developer<br/>
+					3 - I will become fullstack developer<br/>
+					2 - I will become fullstack developer<br/>
+					1 - I will become fullstack developer<br/>
+					`;
+					setTimeout(soal4, waktuMenit);
+				}
+
+				function soal4() {
+					document.getElementById("isi").innerHTML =
+						`
+					<h4>Soal 4 : Mengakses Nilai Dalam Array</h4><br/><br/>
+					//input "hello world!"<br/><br/>
+					//output<br/><br/>
+					"!dlrow ,olleh"<br/>
+					`;
+					setTimeout(soal5, waktuMenit);
+				}
+
+				function soal5() {
+					document.getElementById("isi").innerHTML =
+						`
+					<h4>Soal 5 : Melakukan Looping Menggunakan While</h4>
+					2 - I love coding<br/>
+					4 - I love coding<br/>
+					6 - I love coding<br/>
+					8 - I love coding<br/>
+					10 - I love coding<br/>
+					12 - I love coding<br/>
+					14 - I love coding<br/>
+					16 - I love coding<br/>
+					18 - I love coding<br/>
+					20 - I love coding<br/>
+					20 - I will become fullstack developer<br/>
+					18 - I will become fullstack developer<br/>                                                                         
+					16 - I will become fullstack developer<br/>
+					14 - I will become fullstack developer<br/>
+					12 - I will become fullstack developer<br/>
+					10 - I will become fullstack developer<br/>
+					8 - I will become fullstack developer<br/>
+					6 - I will become fullstack developer<br/>
+					4 - I will become fullstack developer<br/>
+					2 - I will become fullstack developer<br/>
+					`;
+					setTimeout(soal6, waktuMenit);
+				}
+
+				function soal6() {
+					document.getElementById("isi").innerHTML =
+						`
+					<h4>Soal 6: Melakukan Looping Data Array</h4>
+					//contoh input<br/>
+					var input = [<br/>
+									["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"],<br/>
+									["0002", "Dika Sembiring", "Medan", "10/10/1992", "Bermain Gitar"],<br/>
+									["0003", "Winona", "Ambon", "25/12/1965", "Memasak"],<br/>
+									["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]<br/>
+								]<br/><br/>
+								//OUTPUT<br/>
+					Nomor ID:  0001<br/>
+					Nama Lengkap:  Roman Alamsyah<br/>
+					TTL:  Bandar Lampung 21/05/1989<br/>
+					Hobi:  Membaca<br/>
+
+					`;
+					setTimeout(soal7, waktuMenit);
+				}
+
+				function soal7() {
+					document.getElementById("isi").innerHTML =
+						`
+					<h4>Soal 7 : Menggunakan Built-in Function pada Array</h4><br/>
+					//contoh output<br/>
+					var input = ["0001", "Roman Alamsyah ", "Bandar Lampung", "21/05/1989", "Membaca"];<br/><br/>
+					function dataHandling2(){<br/><br/>
+						tulis kode di sini boss<br/><br/>
+					}<br/><br/>
+					dataHandling2(input);<br/>
+
+					/**<br/>
+					* keluaran yang diharapkan (pada console)<br/>
+					*<br/>
+					* ["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]<br/>
+					* Mei<br/>
+					* [1989, 21, 5]<br/>
+					* 1989-21-05<br/>
+					* Roman Alamsyah<br/>
+					*/<br/>
+					`;
+					setTimeout(selesai, waktuMenit);
+				}
+
+				function selesai() {
+					document.getElementById("isi").innerHTML =
+						`
+					<h1>Good Girls</h1>
+					`;
+				}
+			</script>
+			<div class="sectionContent">
+				<!-- Testimonial
+    ================================================== -->
+				<section class="nino-testimonial">
+					<div class="container">
+						<div id="isi"></div>
+					</div>
+				</section>
+				<!--/#nino-testimonial-->
+			</div>
+		</div>
+	</section>
+	<!--/#nino-story-->
+
+	<!-- Counting
+    ================================================== -->
+	<section id="nino-counting">
+		<div class="container">
+			<div layout="row" class="verticalStretch">
+				<div class="item">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#nino-counting-->
+
+	<!-- Scroll to top
+    ================================================== -->
+	<a href="#" id="nino-scrollToTop">Go to Top</a>
+
+	<!-- javascript -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+	<script type="text/javascript" src="js/modernizr.custom.97074.js"></script>
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="js/unslider-min.js"></script>
+	<script type="text/javascript" src="js/template.js"></script>
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- css3-mediaqueries.js for IE less than 9 -->
+	<!--[if lt IE 9]>
+	    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+
+</body>
+
+</html>
